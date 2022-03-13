@@ -1,0 +1,5 @@
+package vehiclepublisher;
+
+public interface IVehicleService {
+
+}
