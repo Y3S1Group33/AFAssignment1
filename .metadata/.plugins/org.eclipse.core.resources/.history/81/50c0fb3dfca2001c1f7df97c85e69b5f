@@ -1,0 +1,61 @@
+package vehiclepublisher;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+import vehiclerentaldatabase.IVehicleRentalDb;
+import vehiclerentaldatabase.VehicleRentalDb;
+
+public class VehicleService implements IVehicleService {
+
+	
+	private Connection connection = null;
+	private Statement statement = null;
+	private  IVehicleRentalDb vehicleRentalDatabase;
+	private ResultSet resultSet;
+	
+
+	public VehicleService() {
+		super();
+		vehicleRentalDatabase = (IVehicleRentalDb) new VehicleRentalDb();
+		connection = vehicleRentalDatabase.connection();
+	}
+	@Override
+	public void getAll() {
+		
+		List<VehicleModel>vehiclesList=new ArrayList<VehicleModel>();
+		try {
+			statement=connection.createStatement();
+			String SelectAll = "SELECT * FROM fooditems";
+			resultSet = statement.executeQuery(SelectAll);
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+	
+		
+		try {
+	      while (resultSet.next()) {
+	    	  VehicleModel vehicle = new VehicleModel();
+	    	  
+				vehicle.setId(resultSet.getInt("id"));
+				  vehicle.setVehicleId(resultSet.getString("vehicleId"));
+		    	  vehicle.setModel(resultSet.getString("model"));
+		    	  vehicle.setRegisteredYear(resultSet.getInt("registeredYear"));
+		    	  vehiclesList.add(vehicle);
+			} }catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	    	
+	    	
+	      System.out.println(vehiclesList);
+	}
+	@Override
+	public void getById() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
