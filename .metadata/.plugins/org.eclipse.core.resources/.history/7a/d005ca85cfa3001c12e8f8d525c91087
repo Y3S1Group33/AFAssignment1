@@ -30,7 +30,7 @@ public class Activator implements BundleActivator {
 		String subOption = "y";
 		
 		Scanner scan = new Scanner(System.in);
-		System.out.println("\n\n\n");
+		System.out.println("\n\n");
 		System.out.println("----------Vehicle Management Section ----------\n");
 		System.out.println("1  - Add Vehicle to the Database");
 		System.out.println("2  - Get all Vehicles in the Database");
