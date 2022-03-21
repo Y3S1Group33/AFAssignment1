@@ -35,6 +35,8 @@
         <setEntry value="org.w3c.dom.events@default:default"/>
     </setAttribute>
     <setAttribute key="selected_workspace_bundles">
+        <setEntry value="CostomerConsumer@default:default"/>
+        <setEntry value="CustomerPublisher@default:default"/>
         <setEntry value="RentalInfoConsumer@default:default"/>
         <setEntry value="RentalInfoPublisher@default:default"/>
         <setEntry value="VehicleRentalDatabase@default:default"/>
