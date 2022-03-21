@@ -13,6 +13,8 @@
     <setAttribute key="deselected_workspace_bundles">
         <setEntry value="DriverConsumer"/>
         <setEntry value="DriverPublisher"/>
+        <setEntry value="VehicleConsumer"/>
+        <setEntry value="VehiclePublisher"/>
     </setAttribute>
     <booleanAttribute key="includeOptional" value="true"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>
@@ -33,8 +35,8 @@
         <setEntry value="org.w3c.dom.events@default:default"/>
     </setAttribute>
     <setAttribute key="selected_workspace_bundles">
-        <setEntry value="VehicleConsumer@default:default"/>
-        <setEntry value="VehiclePublisher@default:default"/>
+        <setEntry value="RentalInfoConsumer@default:default"/>
+        <setEntry value="RentalInfoPublisher@default:default"/>
         <setEntry value="VehicleRentalDatabase@default:default"/>
         <setEntry value="com.mysql.jdbc@default:default"/>
     </setAttribute>
