@@ -19,8 +19,8 @@ public class Activator implements BundleActivator {
 		serviceReference = context.getServiceReference(IDriverService.class.getName());
 		@SuppressWarnings("unchecked")
 		IDriverService driver = (IDriverService)context.getService(serviceReference);	
-		//
-		displayVehicles(driver);
+		displayDrivers(driver);
+		
 	}
 	
 	public void stop(BundleContext context) throws Exception {
@@ -29,11 +29,12 @@ public class Activator implements BundleActivator {
 	}
 
 
-	private void displayVehicles(IDriverService driver) {
+	private void displayDrivers(IDriverService driver) {
 		
 		
 		int option;
 		String subOption = "y";
+		String subOption1 = "y";
 		
 		Scanner scan = new Scanner(System.in);
 		System.out.println("\n\n\n");
@@ -61,24 +62,49 @@ public class Activator implements BundleActivator {
 						driver.addDriver();
 					}
 				}
-				displayVehicles(driver);
+				System.out.println("\n\nDo you want to continue with another service(y/n)");
+				subOption1 = scan.nextLine().trim();
+
+				if(subOption1.equals("y")||subOption.equals("Y")) {
+					displayDrivers(driver);
+				}
 				break;
 			case 2:
 				driver.getAll();
-				displayVehicles(driver);
+				System.out.println("\n\nDo you want to continue with another service(y/n)");
+				subOption1 = scan.nextLine().trim();
+
+				if(subOption1.equals("y")||subOption.equals("Y")) {
+					displayDrivers(driver);
+				}
 				break;
 			case 3:
 				driver.getById();
-				displayVehicles(driver);
+				System.out.println("\n\nDo you want to continue with another service(y/n)");
+				subOption1 = scan.nextLine().trim();
+
+				if(subOption1.equals("y")||subOption.equals("Y")) {
+					displayDrivers(driver);
+				}
 				break;
 			case 4:
 				driver.deleteDriver();
-				displayVehicles(driver);
+				System.out.println("\n\nDo you want to continue with another service(y/n)");
+				subOption1 = scan.nextLine().trim();
+
+				if(subOption1.equals("y")||subOption.equals("Y")) {
+					displayDrivers(driver);
+				}
 				break;
 			
 			default:
 				System.out.println("Incorrect Input. Try Again...");
-				displayVehicles(driver);
+				System.out.println("\n\nDo you want to continue with another service(y/n)");
+				subOption1 = scan.nextLine().trim();
+
+				if(subOption1.equals("y")||subOption.equals("Y")) {
+					displayDrivers(driver);
+				}
 		}
 		
 		

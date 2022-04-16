@@ -11,6 +11,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\User\Desktop\S5\Assignments\SA\1\OSGI 21 Final\AFAssignment1"/>
+			<item value="C:\Users\User\Desktop\OSGI 21 Final\AFAssignment1"/>
 			<item value="C:\Users\User\Desktop\SA OSGI\AFAssignment1"/>
 			<item value="/Users/dinethrex/Desktop/AFPluginProject/com.mysql.jdbc"/>
 		</list>
